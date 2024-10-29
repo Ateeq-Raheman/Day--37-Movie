@@ -1,6 +1,8 @@
-const API_URL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b96fe4e7066548585bc569b7406bbf55&page=1";
+import { GITHUB_API_KEY, MOVIEDB_API_KEY } from "./secret.js";
+
+const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${GITHUB_API_KEY}&page=1`;
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
-const SEARCH_API = "https://api.themoviedb.org/3/search/movie?api_key=04c35731a5ee918f014970082a0088b1&query=";
+const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${MOVIEDB_API_KEY}&query=`;
 
 const main = document.getElementById("main");
 const form = document.getElementById("form");
