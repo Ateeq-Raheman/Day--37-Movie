@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #e50914;
+    --Secondary-color: #fcfcfc;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    color: #e50914;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: -100px;
+    margin-top: 12px;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    background-color: (#000000);
+    color: #ffffff;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--Secondary-color);
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #000000;
+}
+
+.search::placeholder {
+    color: #000000;
+}
+
+.search:focus {
+    outline: none;
+    background-color: var(--secondary-color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.4px 4px 5px rgba(255, 0, 0, 0.7);
+    background-color: var(--Secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    background-color: rgb(0, 255, 0);
+}
+
+.movie-info span.orange {
+    background-color: rgb(255, 166, 0);
+    /* color: #fcfcfc; */
+}
+
+.movie-info span.red {
+    background-color: rgb(255, 0, 0);
+    /* color: #fcfcfc; */
+}
+
+.overview {
+    background-color: #f10000;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
